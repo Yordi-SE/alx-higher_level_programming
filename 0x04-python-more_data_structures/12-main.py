@@ -20,3 +20,5 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "XXXIV"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+roman_number = 121223234
+print("{} = {}".format(roman_number, roman_to_int(roman_number))) 
