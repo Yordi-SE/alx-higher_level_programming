@@ -3,7 +3,7 @@
 
 def best_score(a_dictionary):
     if a_dictionary:
-        sorted_dict = dict(sorted(a_dictionary.items(), key=lambda item: item[1]))
-        for i in sorted_dict.keys():
+        s = dict(sorted(a_dictionary.items(), key=lambda item: item[1]))
+        for i in s.keys():
             continue
         return i
