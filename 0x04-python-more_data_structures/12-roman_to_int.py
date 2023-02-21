@@ -9,4 +9,6 @@ def roman_to_int(roman_string):
             for j in roman_string:
                 if (i == j):
                     num = num + my_dict[i]
-    return num
+        return num
+    else:
+        return 0
