@@ -8,11 +8,11 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
             num += 1
         except OverflowError:
-            pass
+            continue
         except ValueError:
-            pass
+            continue
         except TypeError:
-            pass
+            continue
     if (x > 0):
         print("")
     return num
