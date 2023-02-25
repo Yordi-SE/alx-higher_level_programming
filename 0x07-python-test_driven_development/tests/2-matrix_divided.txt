@@ -1,0 +1,40 @@
+ Here is the manual to use matrix divider
+==========================================
+
+it divides all elements of matrix by specific number.
+
+ >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+ >>> matrix_divided([1, 2, 4, 5, [1, 2, 3, 4]], 2)
+ Traceback (most recent call last):
+		...
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+ >>> matrix_divided([1, 2, 4, 5], 2)
+ Traceback (most recent call last):
+		...
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+ >>> matrix_divided([['yordi', 1, 3, 4], [1, 2, 4, 4]], 2)
+ Traceback (most recent call last):
+		...
+ TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+ >>> matrix_divided([[2, 4, 1, 3, 4], [1, 2, 4, 4]], 2)
+ Traceback (most recent call last):
+		...
+ TypeError: Each row of the matrix must have the same size
+
+ >>> matrix_divided([[2, 1, 3, 4], [1, 2, 4, 4]], 'a') 
+ Traceback (most recent call last):
+		...
+ TypeError: div must be a number
+
+ >>> matrix_divided([[2, 1, 3, 4], [1, 2, 4, 4]], 0) # doctest: +NORMALIZE_WHITESPACE
+ Traceback (most recent call last):
+		...
+ ZeroDivisionError: division by zero
+
+ >>> matrix_divided([[2, 2, 3, 4], [1, 2, 4, 4]], 2)
+ [[1.0, 1.0, 1.5, 2.0], [0.5, 1.0, 2.0, 2.0]]
+
