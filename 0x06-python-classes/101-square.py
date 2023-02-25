@@ -9,9 +9,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
-    
-    def __str__(self):
-        self.my_print()
 
     @property
     def size(self):
@@ -53,3 +50,20 @@ class Square:
             [print(" ", end="") for j in range(0, self.__position[0])]
             [print("#", end="") for k in range(0, self.__size)]
             print("")
+
+    def my_print_2(self):
+        """prints in stdout the square with the character #"""
+        if self.__size == 0:
+            print("")
+            return
+
+        [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            if (i != self.__size - 1):
+                print("")
+
+    def __str__(self):
+        self.my_print_2()
+        return ""
