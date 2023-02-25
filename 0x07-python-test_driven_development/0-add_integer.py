@@ -18,5 +18,3 @@ def add_integer(a, b=98):
     """
     x, y = (int(i) for i in [a, b])
     return x + y
-
-    

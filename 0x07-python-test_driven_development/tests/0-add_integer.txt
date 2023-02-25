@@ -10,6 +10,8 @@ add_integer() return the sum of its arguments.
  5
  >>> add_integer(2.3, 2.7)
  4
+ >>> add_integer(3.5, 3)
+ 6
  >>> add_integer(-1, 1)
  0
  >>> add_integer(4)
