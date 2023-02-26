@@ -41,3 +41,7 @@ it divides all elements of matrix by specific number.
  >>> matrix_divided([[2, 2, 3, 4], [1, 2, 4, 4]], -2)
  [[-1.0, -1.0, -1.5, -2.0], [-0.5, -1.0, -2.0, -2.0]]
 
+ >>> matrix_divided([[], []], 2) # doctest: +NORMALIZE_WHITESPACE
+ Traceback (most recent call last):
+	...
+ TypeError: matrix must be a matrix (list of lists) of integers/floats

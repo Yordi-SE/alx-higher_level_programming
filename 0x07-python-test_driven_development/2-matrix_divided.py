@@ -16,6 +16,8 @@ def matrix_divided(matrix, div):
     for i in matrix:
         if not isinstance(i, list):
             raise TypeError("{}{}".format(m, n))
+        if len(i) == 0:
+            raise TypeError("{}{}".format(m, n))
         for j in i:
             if not isinstance(j, int) and not isinstance(j, float):
                 raise TypeError("{}{}".format(m, n))
