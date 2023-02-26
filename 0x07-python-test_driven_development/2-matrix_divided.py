@@ -1,14 +1,22 @@
 #!/usr/bin/python3
+"""
+This is a Module that contains the defination of
+function that we use to divide each elemnts of matrix
+"""
 
 
 def matrix_divided(matrix, div):
+    """Here we put a defination of the fuction
+    """
     list1 = []
+    m = "matrix must be a matrix"
+    n = " (list of lists) of integers/floats"
     for i in matrix:
         if not isinstance(i, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("{}{}".format(m, n))
         for j in i:
             if not isinstance(j, int) and not isinstance(j, float):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("{}{}".format(m, n))
         tmp = len(matrix[0])
         if (tmp != len(i)):
             raise TypeError("Each row of the matrix must have the same size")
