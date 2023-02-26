@@ -11,6 +11,8 @@ def matrix_divided(matrix, div):
     list1 = []
     m = "matrix must be a matrix"
     n = " (list of lists) of integers/floats"
+    if matrix is None or matrix == []:
+        raise TypeError("{}{}".format(m, n))
     for i in matrix:
         if not isinstance(i, list):
             raise TypeError("{}{}".format(m, n))
