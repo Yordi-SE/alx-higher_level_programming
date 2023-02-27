@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+"""This module contains the defination of
+   class which called Rectangle
+   """
 
 
 class Rectangle:
+    """Ok here we define the class
+    """
 
     def __init__(self, width=0, height=0):
         self.__width = width
