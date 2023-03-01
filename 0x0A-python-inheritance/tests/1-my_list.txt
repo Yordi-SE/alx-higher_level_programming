@@ -1,0 +1,22 @@
+  doctest for MyList Class
+===========================
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list += [1, 4, 2, 3, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list2 = MyList()
+>>> my_list2 += [-1, -2, 3, 2, 5]
+>>> my_list2.print_sorted()
+[-2, -1, 2, 3, 5]
+
+>>> print(my_list2)
+[-1, -2, 3, 2, 5]
