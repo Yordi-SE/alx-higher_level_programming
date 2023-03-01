@@ -19,6 +19,7 @@ class Square(Rectangle):
         """Implement area
         """
         return self.__size**2
+
     def __str__(self):
         """magic str method
         """
