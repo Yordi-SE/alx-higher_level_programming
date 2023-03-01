@@ -20,3 +20,10 @@
 
 >>> print(my_list2)
 [-1, -2, 3, 2, 5]
+
+>>> my_list3 = MyList()
+>>> print(my_list3)
+[]
+
+>>> my_list3.print_sorted()
+[]
