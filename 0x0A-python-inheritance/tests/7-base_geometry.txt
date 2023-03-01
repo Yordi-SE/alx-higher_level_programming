@@ -1,0 +1,32 @@
+  doctest for BaseGeometry class
+==================================
+
+for area method()
+=================
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+>>> goe = BaseGeometry()
+>>> goe.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+
+
+for integer_validator method
+==============================
+
+if name is not integer
+========================
+
+>>> goe.integer_validator('distance', 'bool')
+Traceback (most recent call last):
+	...
+TypeError: distance must be an integer
+
+if name is less than or equal to 0
+====================================
+
+>>> goe.integer_validator('distance', -1)
+Traceback (most recent call last):
+	...
+ValueError: distance must be greater than 0
