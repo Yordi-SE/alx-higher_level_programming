@@ -23,4 +23,4 @@ def append_after(filename="", search_string="", new_string=""):
             str_r = f.readline()
             t = (m * s) + f.tell()
     with open(filename, 'w', encoding='utf-8') as f:
-        f.write(content1)
+        f.write(content)
