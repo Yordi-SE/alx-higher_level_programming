@@ -20,5 +20,5 @@ class Square(Rectangle):
         """This is the magic
         function
         """
-        m = "[Square] {} {}/{} - {}"
+        m = "[Square] ({}) {}/{} - {}"
         return m.format(self.id, self.x, self.y, self.width)
