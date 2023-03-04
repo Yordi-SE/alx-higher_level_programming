@@ -110,15 +110,22 @@ class Rectangle(Base):
         m = "[Rectangle] ({}) {}/{} - {}/{}"
         return m.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This puplic method updates
         the attribute of the class
         """
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except Exception:
-            pass
+        if not args or len(args) == 0:
+            self.id = kwargs[id]
+            self.width = kwargs[width]
+            self.height = kwargs[height]
+            self.x = kwargs[x]
+            self.y = kwargs[y]
+        else:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except Exception:
+                pass
