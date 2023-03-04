@@ -58,3 +58,14 @@ class Square(Rectangle):
                 self.y = args[3]
             except Exception:
                 pass
+
+    def to_dictionary(self):
+        """This puplic instance method
+        returns dictionary of the attributes
+        """
+        my_dict = {}
+        my_dict['size'] = self.size
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        my_dict['id'] = self.id
+        return my_dict
