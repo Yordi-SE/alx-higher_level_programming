@@ -9,11 +9,11 @@ class Rectangle(Base):
     """HEre we put body
     of the class
     """
-    def __init__(self, width, height, x=0, y=0, id):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """This is the constructor
         of this class
         """
-        super.__init__(id)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
@@ -103,4 +103,5 @@ class Rectangle(Base):
         """This is magic method
         that returns string
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
+        m = "[Rectangle] ({}) {}/{} - {}/{}"
+        return m.format(self.id, self.x, self.y, self.width, self.height)
