@@ -88,3 +88,12 @@ class Rectangle(Base):
         rectangle
         """
         return self.width * self.height
+
+    def display(self):
+        """This puplic instance method prints
+        the instance to stdout by #
+        """
+        for y in self.height:
+            for w in self.width:
+                print("#", end="")
+            print("")
