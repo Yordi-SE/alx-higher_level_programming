@@ -94,7 +94,11 @@ class Rectangle(Base):
         """This puplic instance method prints
         the instance to stdout by #
         """
+        for u in range(self.y):
+            print("")
         for y in range(self.height):
+            for t in range(self.x):
+                print(" ", end="")
             for w in range(self.width):
                 print("#", end="")
             print("")
