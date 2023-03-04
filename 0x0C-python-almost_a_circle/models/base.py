@@ -3,7 +3,6 @@
 of the class Base
 """
 import json
-import models.rectangle
 
 
 class Base:
@@ -59,6 +58,9 @@ class Base:
         """This class method
         returns assinged instance
         """
-        r1 = models.rectangle.Rectangle(4, 5)
-        r1.update(**dictionary)
-        return r1
+        if cls.__name__ == "Rectangle":
+            instance = cls(4, 5)
+        else:
+            instance = cls(3)
+        instance.update(**dictionary)
+        return instance
