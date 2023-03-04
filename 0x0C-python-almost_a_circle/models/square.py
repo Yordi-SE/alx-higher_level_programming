@@ -44,10 +44,8 @@ class Square(Rectangle):
             for i, j in kwargs.items():
                 if i == 'id':
                     self.id = j
-                if i == 'width':
-                    self.width = j
-                if i == 'height':
-                    self.height = j
+                if i == 'size':
+                    self.size = j
                 if i == 'x':
                     self.x = j
                 if i == 'y':
@@ -55,9 +53,8 @@ class Square(Rectangle):
         else:
             try:
                 self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
             except Exception:
                 pass
