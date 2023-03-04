@@ -43,3 +43,12 @@ class Base:
                 for i in list_objs:
                     list1.append(i.to_dictionary())
                 f.write(cls.to_json_string(list1))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """This static method load data
+        from json string
+        """
+        if json_string is None:
+            return []
+        return json.loads(json_string)
