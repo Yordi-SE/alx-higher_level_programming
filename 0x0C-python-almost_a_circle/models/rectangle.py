@@ -84,7 +84,7 @@ class Rectangle(Base):
 
     def area(self):
         """This is puplic instance method
-        that returns the area of the 
+        that returns the area of the
         rectangle
         """
         return self.width * self.height
