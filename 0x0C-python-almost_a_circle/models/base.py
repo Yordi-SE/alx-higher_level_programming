@@ -3,6 +3,7 @@
 of the class Base
 """
 import json
+import models.rectangle
 
 
 class Base:
@@ -52,3 +53,12 @@ class Base:
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """This class method
+        returns assinged instance
+        """
+        r1 = models.rectangle.Rectangle(4, 5)
+        r1.update(**dictionary)
+        return r1
