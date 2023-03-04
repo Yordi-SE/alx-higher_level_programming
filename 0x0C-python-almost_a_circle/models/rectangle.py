@@ -137,6 +137,9 @@ class Rectangle(Base):
                 pass
 
     def to_dictionary(self):
+        """This puplic instance method
+        returns dictionary of the attributes
+        """
         my_dict = {}
         my_dict['width'] = self.width
         my_dict['height'] = self.height
