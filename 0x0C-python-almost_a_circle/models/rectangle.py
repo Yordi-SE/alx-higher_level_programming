@@ -115,11 +115,17 @@ class Rectangle(Base):
         the attribute of the class
         """
         if not args or len(args) == 0:
-            self.id = kwargs[id]
-            self.width = kwargs[width]
-            self.height = kwargs[height]
-            self.x = kwargs[x]
-            self.y = kwargs[y]
+            for i, j in kwargs.items():
+                if i == 'id':
+                    self.id = j
+                if i == 'width':
+                    self.width = j
+                if i == 'height':
+                    self.height = j
+                if i == 'x':
+                    self.x = j
+                if i == 'y':
+                    self.y = j
         else:
             try:
                 self.id = args[0]
