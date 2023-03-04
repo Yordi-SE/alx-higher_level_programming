@@ -42,4 +42,4 @@ class Base:
                 list1 = []
                 for i in list_objs:
                     list1.append(i.to_dictionary())
-            f.write(cls.to_json_string(list1))
+                f.write(cls.to_json_string(list1))
