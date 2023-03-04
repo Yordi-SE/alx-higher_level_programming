@@ -135,3 +135,12 @@ class Rectangle(Base):
                 self.y = args[4]
             except Exception:
                 pass
+
+    def to_dictionary(self):
+        my_dict = {}
+        my_dict['width'] = self.width
+        my_dict['height'] = self.height
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        my_dict['id'] = self.id
+        return my_dict
