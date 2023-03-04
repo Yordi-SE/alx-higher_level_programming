@@ -22,19 +22,3 @@ class Square(Rectangle):
         """
         m = "[Square] {} {}/{} - {}"
         return m.format(self.id, self.x, self.y, self.width)
-
-    @property
-    def width(self):
-        """This getter
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        """This is setter
-        """
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        if value <= 0:
-            raise ValueError("size must be > 0")
-        self.__width = value
