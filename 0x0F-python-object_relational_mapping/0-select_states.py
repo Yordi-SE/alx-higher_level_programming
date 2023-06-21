@@ -3,6 +3,7 @@
 of states table"""
 if __name__ == '__main__':
     import MySQLdb
+    import sys
     h = 'localhost'
     r = sys.argv[1]
     m = sys.argv[2]
