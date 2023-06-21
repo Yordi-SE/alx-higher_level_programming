@@ -10,13 +10,7 @@ if __name__ == '__main__':
     mdb = sys.argv[3]
     db = MySQLdb.connect(host=h, port=3306, user=r, passwd=m, db=mdb)
     cur = db.cursor()
-    cur.execute("select * from states where name like 'N%' order by id")
+    cur.execute("select * from states where name like binary 'N%' order by states.id ASC;")
     rows = cur.fetchall()
     for row in rows:
-        print("(", end="")
-        for col in row:
-            if not isinstance(col, int):
-                print("'" + col + "'", end="")
-            else:
-                print(col, end=", ")
-        print(")")
+        print(row)
