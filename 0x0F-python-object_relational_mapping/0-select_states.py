@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" this excute the database to return all columns
+of states table"""
 import MySQLdb
 db = MySQLdb.connect(host='localhost', port=3306, user='root', passwd='root', db='hbtn_0e_0_usa')
 cur = db.cursor()
