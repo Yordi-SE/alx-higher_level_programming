@@ -16,8 +16,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute(query, (s,))
     rows = cur.fetchall()
-    for i in range(len(rows)):
-        if i < len(rows) - 1:
-            print(rows[i][0], end=", ")
-        else:
-            print(rows[i][0])
+    ls = []
+    for row in rows:
+        ls.append(row[0])
+    print(", ".join(ls))
