@@ -8,7 +8,7 @@ if __name__ == '__main__':
     mdb = 'hbtn_0e_0_usa'
     db = MySQLdb.connect(host=h, port=3306, user=r, passwd=r, db=mdb)
     cur = db.cursor()
-    cur.execute("select * from states")
+    cur.execute("select * from states order by id")
     rows = cur.fetchall()
     for row in rows:
         print("(", end="")
