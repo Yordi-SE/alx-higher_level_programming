@@ -4,9 +4,10 @@ of states table"""
 if __name__ == '__main__':
     import MySQLdb
     h = 'localhost'
-    r = 'root'
-    mdb = 'hbtn_0e_0_usa'
-    db = MySQLdb.connect(host=h, port=3306, user=r, passwd=r, db=mdb)
+    r = sys.argv[1]
+    m = sys.argv[2]
+    mdb = sys.argv[3]
+    db = MySQLdb.connect(host=h, port=3306, user=r, passwd=m, db=mdb)
     cur = db.cursor()
     cur.execute("select * from states order by id")
     rows = cur.fetchall()
