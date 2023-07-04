@@ -1,4 +1,0 @@
--- this scrpt returns a rows of the table
-SELECT score, name FROM second_table
-WHERE score >= 10
-ORDER BY score DESC
