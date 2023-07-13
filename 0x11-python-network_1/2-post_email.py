@@ -8,7 +8,7 @@ import urllib.parse
 
 
 def main():
-    email = {'email':sys.argv[2]}
+    email = {'email': sys.argv[2]}
     email = urllib.parse.urlencode(email)
     email = email.encode('ascii')
     url = sys.argv[1]
