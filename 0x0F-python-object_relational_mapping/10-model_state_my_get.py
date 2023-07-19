@@ -14,7 +14,7 @@ if __name__ == '__main__':
     session = Session()
     row = session.query(State.id).filter_by(name=sys.argv[4]).all()
     if row == []:
-        print("Not Found")
+        print("Not found")
     else:
         for i in row:
             print(i[0])
