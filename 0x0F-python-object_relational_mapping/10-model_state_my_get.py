@@ -16,4 +16,5 @@ if __name__ == '__main__':
     if row == []:
         print("Not Found")
     else:
-        print(row[0][0])
+        for i in row:
+            print(i[0])
