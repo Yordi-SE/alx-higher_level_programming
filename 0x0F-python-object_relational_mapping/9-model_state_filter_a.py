@@ -12,5 +12,6 @@ if __name__ == '__main__':
     engine = create_engine(url)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for row in session.query(State).filter(State.name.like('%a%')).order_by(State.id):
+    for row in session.query(State)\
+            .filter(State.name.like('%a%')).order_by(State.id):
         print("{}:".format(row.id), row.name)
